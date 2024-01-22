@@ -1,4 +1,6 @@
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
 
 import { GeistSans } from "geist/font/sans";
 
@@ -24,7 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={GeistSans.variable}>{children}</body>
+      <body className={GeistSans.variable}>
+        {children}
+        <ToastContainer bodyClassName={GeistSans.variable} />
+      </body>
     </html>
   );
 }
